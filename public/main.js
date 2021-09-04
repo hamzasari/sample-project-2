@@ -125,7 +125,7 @@ const calculateTimeDifferenceInSecondsAccordingToNow = (timestamp) => {
  * It runs on O(1) most of the time
  *
  * I used filtering on eventQueue at first, but that approach will be very slow when working with very big eventQueue
- * With this approach it will work very fast and always work with same time complexity if we even have one million items in event queue
+ * With this approach it will work very fast and always work with same time complexity if we even have one million or more items in event queue, this will important for scalability
  */
 const ignoreFirstEventWithTypeMessageOlderThan20Seconds = () => {
   // work only if current element type is message
